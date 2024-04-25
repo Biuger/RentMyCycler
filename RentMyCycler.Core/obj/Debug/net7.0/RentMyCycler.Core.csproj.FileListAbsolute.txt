@@ -1,0 +1,11 @@
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\bin\Debug\net7.0\RentMyCycler.Core.deps.json
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\bin\Debug\net7.0\RentMyCycler.Core.dll
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\bin\Debug\net7.0\RentMyCycler.Core.pdb
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\RentMyCycler.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\RentMyCycler.Core.AssemblyInfoInputs.cache
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\RentMyCycler.Core.AssemblyInfo.cs
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\RentMyCycler.Core.csproj.CoreCompileInputs.cache
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\RentMyCycler.Core.dll
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\refint\RentMyCycler.Core.dll
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\RentMyCycler.Core.pdb
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\ref\RentMyCycler.Core.dll
