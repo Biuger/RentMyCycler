@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dS8pzHQHwEkjp5fjAU0+UHYLtFrKdQ76EbNpxG+mh+sLvnbfKDf4k+HkhxEJnPC8DdlvZtjMec5MXtjFj9CdAw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\RentMyCycler.Website.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}
