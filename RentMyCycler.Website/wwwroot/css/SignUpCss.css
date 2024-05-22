@@ -2,18 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://c1.wallpaperflare.com/preview/656/735/758/city-bike-obike-munich-bicycle-rental-bike.jpg'); 
+    background-image: url('https://c1.wallpaperflare.com/preview/656/735/758/city-bike-obike-munich-bicycle-rental-bike.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 body::before {
     content: "";
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    width: 100%; 
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
 

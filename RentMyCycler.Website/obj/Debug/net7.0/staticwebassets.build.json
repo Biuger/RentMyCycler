@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PMw5MSzVLlsgFVJ1c/hcYB62Tdy6Z9/rdkORyRWfiuk=",
+  "Hash": "WhwI4/8lNmKl+j0Sy2z1lS9RwBZBHCGoU2GL/qD/4w0=",
   "Source": "RentMyCycler.Website",
   "BasePath": "_content/RentMyCycler.Website",
   "Mode": "Default",
@@ -814,6 +814,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\LoginCss.css"
+    },
+    {
+      "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\SignUpCss.css",
+      "SourceId": "RentMyCycler.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\",
+      "BasePath": "_content/RentMyCycler.Website",
+      "RelativePath": "css/SignUpCss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\SignUpCss.css"
     },
     {
       "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\site.css",
