@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://c1.wallpaperflare.com/preview/656/735/758/city-bike-obike-munich-bicycle-rental-bike.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+
+.text-center {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.display-4 {
+    font-size: 3.5em;
+    color: white;
+    font-weight: bold;
+}
+
+.lead {
+    color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.col-md-4 {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+.text-center p {
+    margin-top: 15px;
+    color: #888;
+}
+
+.text-center a {
+    color: #ff9800;
+    text-decoration: none;
+}

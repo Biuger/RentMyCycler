@@ -49,4 +49,20 @@ button.accept-policy {
   color: white !important;;
   text-align: center; 
 }
+.navbar {
+  background-color: #ff6600;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  font-weight: bold !important;;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+}
+.navbar .login a {
+  color: white;
+  text-decoration: none;
+}
 

@@ -50,4 +50,20 @@ button.accept-policy[b-pfbkpt9mp3] {
   color: white !important;;
   text-align: center; 
 }
+.navbar[b-pfbkpt9mp3] {
+  background-color: #ff6600;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  font-weight: bold !important;;
+}
+
+.navbar .logo[b-pfbkpt9mp3] {
+  font-size: 1.5em;
+}
+.navbar .login a[b-pfbkpt9mp3] {
+  color: white;
+  text-decoration: none;
+}
 
