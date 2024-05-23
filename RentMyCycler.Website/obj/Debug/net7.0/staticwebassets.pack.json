@@ -185,6 +185,10 @@
       "PackagePath": "staticwebassets\\TiggerButt.png"
     },
     {
+      "Id": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\AdminMenuCss.css",
+      "PackagePath": "staticwebassets\\css\\AdminMenuCss.css"
+    },
+    {
       "Id": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\LoginCss.css",
       "PackagePath": "staticwebassets\\css\\LoginCss.css"
     },

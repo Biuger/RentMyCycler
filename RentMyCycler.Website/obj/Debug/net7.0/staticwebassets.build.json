@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "WhwI4/8lNmKl+j0Sy2z1lS9RwBZBHCGoU2GL/qD/4w0=",
+  "Hash": "Unrsc+2BUDbiZX0rL+EmWpTDiTGfWEwqe9g4eJmmoFM=",
   "Source": "RentMyCycler.Website",
   "BasePath": "_content/RentMyCycler.Website",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Api\\RentMyCycler.Api.csproj",
+      "Version": 2,
+      "Source": "RentMyCycler.Api",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "RentMyCycler.Website\\wwwroot",
@@ -797,6 +809,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\RentMyCycler.Website.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\AdminMenuCss.css",
+      "SourceId": "RentMyCycler.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\",
+      "BasePath": "_content/RentMyCycler.Website",
+      "RelativePath": "css/AdminMenuCss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AdminMenuCss.css"
     },
     {
       "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\LoginCss.css",

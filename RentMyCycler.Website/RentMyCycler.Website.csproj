@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\RentMyCycler.Api\RentMyCycler.Api.csproj" />
         <ProjectReference Include="..\RentMyCycler.Core\RentMyCycler.Core.csproj"/>
     </ItemGroup>
 
@@ -17,6 +18,11 @@
     <ItemGroup>
       <None Include="wwwroot\css\LoginCss.css" />
       <None Include="wwwroot\css\SignUpCss.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Pages\CatalogBikes\" />
+      <Folder Include="Pages\UserProfile\" />
     </ItemGroup>
 
 </Project>

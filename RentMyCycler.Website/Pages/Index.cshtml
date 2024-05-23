@@ -11,6 +11,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - RentMyCycler</title>
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        .view-all-link {
+            font-size: 24px; 
+            color: orange; 
+            text-decoration: none; 
+        }
+
+        .view-all-link:hover {
+            color: darkorange; 
+        }
+    </style>
 </head>
 <body>
 <main>
@@ -85,8 +96,42 @@
         </div>
     </section>
     
-    <section class="benefits">
-    <h2>Bikes</h2>
+    <section class="bikes">
+        <h2>Bikes</h2>
+        <div class="card-container-bike">
+            <a href="#">
+                <div class="card-bike">
+                    <div class="card-image-bike">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6381/6381416.png" alt="Bicycle Image">
+                    </div>
+                    <div class="card-content-bike">
+                        <p>Customers can reserve a bicycle at any time of the day or night, regardless of their physical location.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card-bike">
+                    <div class="card-image-bike">
+                        <img src="https://i.pinimg.com/originals/52/e2/d7/52e2d779b75c12e8b431651292b57bca.png" alt="Bicycle Image">
+                    </div>
+                    <div class="card-content-bike">
+                        <p>Customers can select the size and style of bicycle that best suits their needs and preferences.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="/dsd">
+                <div class="card-bike">
+                    <div class="card-image-bike">
+                        <img src="~/TiggerButt.png" alt="Bicycle Image">
+                    </div>
+                    <div class="card-content-bike">
+                        <p>By booking online, customers can ensure that the bicycle they want is available at the desired time and place.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <br/>
+        <a href="http://www.example.com" class="view-all-link">View All</a>
     </section>
 </main>
 </body>

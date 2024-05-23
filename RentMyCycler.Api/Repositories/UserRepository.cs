@@ -53,4 +53,12 @@ public class UserRepository : IUserRepository
         return user.isDeleted == true ? null : user;
        
     }
+    public async Task<Users> GetLogin(string id)
+        {
+            var user = await _dbContext.Connection.GetAsync<Users>(id);
+            if (user == null)
+                return null;
+            return user.isDeleted == true ? null : user;
+           
+        }
 }

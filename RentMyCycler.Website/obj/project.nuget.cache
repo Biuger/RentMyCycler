@@ -1,10 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "dS8pzHQHwEkjp5fjAU0+UHYLtFrKdQ76EbNpxG+mh+sLvnbfKDf4k+HkhxEJnPC8DdlvZtjMec5MXtjFj9CdAw==",
+  "dgSpecHash": "beMfbxO3dZjyi2BQ6qlOhyhG34VXD6ayOjwXc9j+dtizug/SJ7EVVNlAjVYVPcxKRK39k2M+/wqJp/JVFAnCxA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\RentMyCycler.Website.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Angel Rosales\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512"
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\dapper\\2.1.37\\dapper.2.1.37.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.16\\microsoft.aspnetcore.openapi.7.0.16.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": []
 }
