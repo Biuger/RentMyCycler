@@ -1,5 +1,14 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5278); // Puerto HTTP
+    options.ListenAnyIP(7031, listenOptions =>
+    {
+        listenOptions.UseHttps(); // Puerto HTTPS
+    });
+});
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 

@@ -14,4 +14,5 @@ public class Bikes: EntityBase
     public string Condition_bike { get; set; }
     public bool Availability { get; set; }
     public decimal Rental_cost { get; set; }
+    public string Image { get; set; }
 }

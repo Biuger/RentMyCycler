@@ -31,6 +31,8 @@ namespace RentMyCycler.Api.DTO
         [Range(0, double.MaxValue, ErrorMessage = "El costo de alquiler debe ser mayor o igual a cero")]
         public decimal Rental_cost { get; set; }
 
+        public string Image{ get; set; }
+
         public BikeDto()
         {
         }
@@ -45,6 +47,7 @@ namespace RentMyCycler.Api.DTO
             Condition_bike = bikes.Condition_bike;
             Availability = bikes.Availability;
             Rental_cost = bikes.Rental_cost;
+            Image = bikes.Image;
         }
     }
 }

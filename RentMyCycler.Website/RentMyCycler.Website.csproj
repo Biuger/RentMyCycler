@@ -21,8 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Pages\CatalogBikes\" />
-      <Folder Include="Pages\UserProfile\" />
+      <_ContentIncludedByDefault Remove="Pages\Login\Login.cshtml" />
     </ItemGroup>
 
 </Project>

@@ -32,6 +32,7 @@ public class BikeService: IBikeService
             Condition_bike = bikeDto.Condition_bike,
             Availability = bikeDto.Availability,
             Rental_cost = bikeDto.Rental_cost,
+            Image = bikeDto.Image,
             CreatedBy = "",
             CreatedDate = DateTime.Now,
             UpdatedBy = "",
@@ -59,6 +60,7 @@ public class BikeService: IBikeService
         bike.Condition_bike = bikeDto.Condition_bike;
         bike.Availability = bikeDto.Availability;
         bike.Rental_cost = bikeDto.Rental_cost;
+        bike.Image = bikeDto.Image;
         bike.UpdatedBy = "";
         bike.UpdatedDate = DateTime.Now;
         await _bikeRepository.UpdateAsync(bike);

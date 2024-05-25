@@ -28,6 +28,7 @@ public class UserService: IUserService
             Birthdate = userDto.Birthdate,
             Adress = userDto.Adress,
             Cycling_preferences = userDto.Cycling_preferences,
+            Image = userDto.Image,
             Email = userDto.Email,
             Password = userDto.Password,
             Admin = userDto.Admin,
@@ -54,6 +55,7 @@ public class UserService: IUserService
         user.Birthdate = userDto.Birthdate;
         user.Adress = userDto.Adress;
         user.Cycling_preferences = userDto.Cycling_preferences;
+        user.Image = userDto.Image;
         user.Email = userDto.Email;
         user.Password = userDto.Password;
         user.Admin = userDto.Admin;

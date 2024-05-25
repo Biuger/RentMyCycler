@@ -189,12 +189,24 @@
       "PackagePath": "staticwebassets\\css\\AdminMenuCss.css"
     },
     {
+      "Id": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\CatalogBikesCss.css",
+      "PackagePath": "staticwebassets\\css\\CatalogBikesCss.css"
+    },
+    {
+      "Id": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\HomeCss.css",
+      "PackagePath": "staticwebassets\\css\\HomeCss.css"
+    },
+    {
       "Id": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\LoginCss.css",
       "PackagePath": "staticwebassets\\css\\LoginCss.css"
     },
     {
       "Id": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\SignUpCss.css",
       "PackagePath": "staticwebassets\\css\\SignUpCss.css"
+    },
+    {
+      "Id": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\UserProfile.css",
+      "PackagePath": "staticwebassets\\css\\UserProfile.css"
     },
     {
       "Id": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\site.css",

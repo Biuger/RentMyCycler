@@ -2,11 +2,16 @@
 @model RentMyCycler.Website.Pages.SignUp.SignUp
 
 <!DOCTYPE html>
-
 <html>
 <head>
-   
     <link rel="stylesheet" href="~/css/SignUpCss.css" />
+    <style>
+            button:disabled {
+                background-color: grey !important;
+                    border-color: grey !important;
+                    cursor: not-allowed !important;
+            }
+        </style>
 </head>
 <body>
 <div class="text-center">
@@ -17,16 +22,15 @@
 <div class="row justify-content-center">
     <div class="col-md-4">
         <form method="post">
-        <h2>Personal Information</h2>
+            <h2>Personal Information</h2>
             <div class="form-group">
                 <label for="Username">Username:</label>
                 <input id="Username" class="form-control" type="text" asp-for="Input.Username" required />
             </div>
             <div class="form-group">
-                <label for="Address">Adress:</label>
+                <label for="Address">Address:</label>
                 <input id="Address" class="form-control" type="text" asp-for="Input.Address" required />
             </div>
-            
             <div class="form-group">
                 <label for="Birthdate">BirthDate:</label>
                 <input id="Birthdate" class="form-control" type="date" asp-for="Input.Birthdate" required />
@@ -38,10 +42,8 @@
                     <option value="mountain">Montaña</option>
                     <option value="road">Carretera</option>
                     <option value="hybrid">Híbrido</option>
-                                
                 </select>
             </div>
-            
             <br/>
             <h2>Credentials</h2>
             <div class="form-group">
@@ -58,9 +60,31 @@
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             
-            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button id="signUpButton" type="submit" class="btn btn-primary" disabled>Sign Up</button>
         </form>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const password = document.getElementById('Password');
+            const confirmPassword = document.getElementById('ConfirmPassword');
+            const signUpButton = document.getElementById('signUpButton');
+
+            function validatePasswords() {
+                if (password.value === confirmPassword.value && password.value !== '') {
+                    signUpButton.disabled = false;
+                    
+                } else {
+                    signUpButton.disabled = true;
+                }
+            }
+
+            password.addEventListener('input', validatePasswords);
+            confirmPassword.addEventListener('input', validatePasswords);
+        });
+    </script>
+}
 </body>
 </html>

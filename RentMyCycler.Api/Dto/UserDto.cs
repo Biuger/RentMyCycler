@@ -8,6 +8,7 @@ public class UserDto: DtoBase
     public DateOnly Birthdate { get; set; }
     public string Adress { get; set; }
     public string Cycling_preferences { get; set; }
+    public string Image { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
     public bool Admin { get; set; }
@@ -24,6 +25,7 @@ public class UserDto: DtoBase
         Birthdate = users.Birthdate;
         Adress = users.Adress;
         Cycling_preferences = users.Cycling_preferences;
+        Image = users.Image;
         Email = users.Email; 
         Password = users.Password;
         Admin = users.Admin;

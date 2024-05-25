@@ -38,6 +38,20 @@ namespace RentMyCycler.Website.Pages.SignUp
             public string CyclingPreferences { get; set; }
         }
         
+        public async Task<IActionResult> OnPostAsync()
+        {
+            int test = 1;
+        
+            if (test == 1)
+            {
+                return RedirectToPage("/Home/Home");
+            }
+            else
+            {
+                return Page();
+            }
+        }
+        
         public void OnGet()
         {
             

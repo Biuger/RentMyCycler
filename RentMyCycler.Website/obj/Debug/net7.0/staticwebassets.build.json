@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Unrsc+2BUDbiZX0rL+EmWpTDiTGfWEwqe9g4eJmmoFM=",
+  "Hash": "HRU2fcCOfKwiTuvQUM13ZU8WpEOXL99Dp80u5x6FtUw=",
   "Source": "RentMyCycler.Website",
   "BasePath": "_content/RentMyCycler.Website",
   "Mode": "Default",
@@ -828,6 +828,40 @@
       "OriginalItemSpec": "wwwroot\\css\\AdminMenuCss.css"
     },
     {
+      "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\CatalogBikesCss.css",
+      "SourceId": "RentMyCycler.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\",
+      "BasePath": "_content/RentMyCycler.Website",
+      "RelativePath": "css/CatalogBikesCss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CatalogBikesCss.css"
+    },
+    {
+      "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\HomeCss.css",
+      "SourceId": "RentMyCycler.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\",
+      "BasePath": "_content/RentMyCycler.Website",
+      "RelativePath": "css/HomeCss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\HomeCss.css"
+    },
+    {
       "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\LoginCss.css",
       "SourceId": "RentMyCycler.Website",
       "SourceType": "Discovered",
@@ -877,6 +911,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\UserProfile.css",
+      "SourceId": "RentMyCycler.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\",
+      "BasePath": "_content/RentMyCycler.Website",
+      "RelativePath": "css/UserProfile.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\UserProfile.css"
     },
     {
       "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\favicon.ico",

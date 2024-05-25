@@ -46,7 +46,7 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
   background-color: #ff6600;
-  color: white !important;;
+  color: white !important;
   text-align: center; 
 }
 .navbar {
@@ -55,14 +55,11 @@ button.accept-policy {
   display: flex;
   justify-content: space-between;
   padding: 15px 30px;
-  font-weight: bold !important;;
+  font-weight: bold !important;
 }
 
 .navbar .logo {
   font-size: 1.5em;
 }
-.navbar .login a {
-  color: white;
-  text-decoration: none;
-}
+
 

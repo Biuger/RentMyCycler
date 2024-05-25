@@ -46,7 +46,7 @@ button.accept-policy[b-pfbkpt9mp3] {
   white-space: nowrap;
   line-height: 60px;
   background-color: #ff6600;
-  color: white !important;;
+  color: white !important;
   text-align: center; 
 }
 .navbar[b-pfbkpt9mp3] {
@@ -55,14 +55,11 @@ button.accept-policy[b-pfbkpt9mp3] {
   display: flex;
   justify-content: space-between;
   padding: 15px 30px;
-  font-weight: bold !important;;
+  font-weight: bold !important;
 }
 
 .navbar .logo[b-pfbkpt9mp3] {
   font-size: 1.5em;
 }
-.navbar .login a[b-pfbkpt9mp3] {
-  color: white;
-  text-decoration: none;
-}
+
 

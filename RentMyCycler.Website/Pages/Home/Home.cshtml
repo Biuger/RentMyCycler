@@ -1,0 +1,142 @@
+@page
+@model RentMyCycler.Website.Pages.Home.Home
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RentMyCycler</title>
+    <link rel="stylesheet" href="~/css/HomeCss.css" />
+    <style>
+        .view-all-link {
+            font-size: 24px; 
+            color: orange; 
+            text-decoration: none; 
+        }
+
+        .view-all-link:hover {
+            color: darkorange; 
+        }
+    </style>
+</head>
+<header>
+    <div class="navbar">
+         <div class="myProfile"><a href="/UserProfile/UserProfile">My Profile</a></div>
+    </div>
+   
+</header>
+<body>
+<main>
+    <section class="hero">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://d1h6dnptlo7xad.cloudfront.net/app/uploads/2020/11/Bike-Rentals-1920x960-1-scaled.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption">
+                        <h3>PEDAL TOWARDS ADVENTURE!</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://a2.cdn.japantravel.com/photo/59041-198679/1440x960!/how-to-rent-a-bike-in-japan-198679.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption">
+                        <h3>DISCOVER NEW PATHS WITH OUR BICYCLES</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://bike.rent/_next/image?url=%2Fimage.jpeg&w=3840&q=75" class="d-block w-100" alt="...">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption">
+                        <h3>FEEL THE FREEDOM TO MOVE AT YOUR OWN PACE</h3>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2>Our Benefits</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6381/6381416.png" alt="Bicycle Image">
+                </div>
+                <div class="card-content">
+                    <p>Customers can reserve a bicycle at any time of the day or night, regardless of their physical location.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://i.pinimg.com/originals/52/e2/d7/52e2d779b75c12e8b431651292b57bca.png" alt="Bicycle Image">
+                </div>
+                <div class="card-content">
+                    <p>Customers can select the size and style of bicycle that best suits their needs and preferences.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://cdn-icons-png.freepik.com/512/5778/5778439.png" alt="Bicycle Image">
+                </div>
+                <div class="card-content">
+                    <p>By booking online, customers can ensure that the bicycle they want is available at the desired time and place. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bikes">
+        <h2>Bikes</h2>
+        <div class="card-container-bike">
+            <a href="#">
+                <div class="card-bike">
+                    <div class="card-image-bike">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6381/6381416.png" alt="Bicycle Image">
+                    </div>
+                    <div class="card-content-bike">
+                        <p>Customers can reserve a bicycle at any time of the day or night, regardless of their physical location.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card-bike">
+                    <div class="card-image-bike">
+                        <img src="https://i.pinimg.com/originals/52/e2/d7/52e2d779b75c12e8b431651292b57bca.png" alt="Bicycle Image">
+                    </div>
+                    <div class="card-content-bike">
+                        <p>Customers can select the size and style of bicycle that best suits their needs and preferences.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="/dsd">
+                <div class="card-bike">
+                    <div class="card-image-bike">
+                        <img src="~/TiggerButt.png" alt="Bicycle Image">
+                    </div>
+                    <div class="card-content-bike">
+                        <p>By booking online, customers can ensure that the bicycle they want is available at the desired time and place.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <br/>
+        <a href="/CatalogBikes/CatalogBikes" class="view-all-link">View All</a>
+    </section>
+</main>
+</body>
+</html>
