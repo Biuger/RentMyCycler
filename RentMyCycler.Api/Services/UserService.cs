@@ -86,4 +86,13 @@ public class UserService: IUserService
         var userDto = new UserDto(user);
         return userDto;
     }
+    public async Task<UserDto> LoginAsync(string email, string password)
+    {
+        var user = await _userRepository.GetLogin(email, password);
+        if (user == null || user.Password != password)
+        {
+            throw new Exception("User or password incorrect");
+        }
+        return new UserDto(user);
+    }
 }

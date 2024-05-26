@@ -37,3 +37,4 @@ C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\Ren
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Api\obj\Debug\net7.0\RentMyCycler.Api.pdb
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Api\obj\Debug\net7.0\RentMyCycler.Api.genruntimeconfig.cache
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Api\obj\Debug\net7.0\ref\RentMyCycler.Api.dll
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Api\bin\Debug\net7.0\Newtonsoft.Json.dll

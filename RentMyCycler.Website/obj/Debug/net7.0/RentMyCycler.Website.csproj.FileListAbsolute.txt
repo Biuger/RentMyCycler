@@ -47,3 +47,4 @@ C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\Ren
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Website\bin\Debug\net7.0\RentMyCycler.Api.dll
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Website\bin\Debug\net7.0\RentMyCycler.Api.pdb
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Website\obj\Debug\net7.0\RentMyCycler.Website.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Website\bin\Debug\net7.0\Newtonsoft.Json.dll

@@ -9,3 +9,4 @@ C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\Ren
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\refint\RentMyCycler.Core.dll
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\RentMyCycler.Core.pdb
 C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\ref\RentMyCycler.Core.dll
+C:\Users\Angel Rosales\Documents\Proyectos web multi plataforma\RentMyCycler\RentMyCycler.Core\obj\Debug\net7.0\RentMyCycler.Core.csproj.AssemblyReference.cache

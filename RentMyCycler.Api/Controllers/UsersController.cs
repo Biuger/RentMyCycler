@@ -37,9 +37,6 @@ public class UsersController : ControllerBase
         {
             Data = await _userService.SaveAsync(UserDto)
         };
-
-        
-       
         return Created($"/api/[controller]/{UserDto.id}", response);
     }
 
@@ -98,7 +95,22 @@ public class UsersController : ControllerBase
         response.Data = true;
         return Ok(response);
     }
-
     
+    [HttpGet("login")]
+    public async Task<ActionResult<Response<UserDto>>> Login([FromQuery] string email, [FromQuery] string password)
+    {
+        var response = new Response<UserDto>();
+        try
+        {
+            response.Data = await _userService.LoginAsync(email, password);
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            response.Errors.Add(ex.Message);
+            return Unauthorized(response);
+        }
+    }
+
 }
 

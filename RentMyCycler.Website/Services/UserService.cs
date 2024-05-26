@@ -1,3 +1,4 @@
+using System.Text;
 using Newtonsoft.Json;
 using RentMyCycler.Api.DTO;
 using RentMyCycler.Core.http;
@@ -78,4 +79,18 @@ public class UserService: IUserService
 
         return response;
     }
+    
+    public async Task<Response<UserDto>> LoginAsync (UserDto loginDto)
+    {
+        var url = $"{_baseURL}{_endpoint}";
+        var jsonRequest = JsonConvert.SerializeObject(loginDto);
+        var content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
+        var client = new HttpClient();
+        var res = await client.PostAsync(url, content);
+        var json = await res.Content.ReadAsStringAsync();
+        var response = JsonConvert.DeserializeObject<Response<UserDto>>(json);
+
+        return response;
+    }
+    
 }

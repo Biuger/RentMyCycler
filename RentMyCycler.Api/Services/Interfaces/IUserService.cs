@@ -22,4 +22,7 @@ public interface IUserService
     
     //Método para obtener usuarios por id
     Task<UserDto> GetByIdAsync(int id);
+    
+    // Método para autenticar usuarios
+    Task<UserDto> LoginAsync(string email, string password);
 }

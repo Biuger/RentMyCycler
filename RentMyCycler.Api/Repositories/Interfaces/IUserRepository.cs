@@ -18,4 +18,6 @@ public interface IUserRepository
     
     //Método para obtener un usuario por id
     Task<Users> GetByIdAsync(int id);
+    
+    Task<Users> GetLogin(string email, string password);
 }
