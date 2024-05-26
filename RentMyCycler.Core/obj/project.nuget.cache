@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Hs3QFhFSST+3hQRpIMfXkKgsWI2pVPeDlnDrp/m6XKh5e0qzORcvuiKvjurND/+fbQuLHG901NQqdEzyCR4fbg==",
+  "dgSpecHash": "Y3NW/oIlVtqLCFOpyRDuv/OJh7hFpsIz07qwV/klcY+2Pi6GP7Fy9ZQ2uQH6bQfYD1Tv4EsMPPfmlyT7c7naLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Core\\RentMyCycler.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

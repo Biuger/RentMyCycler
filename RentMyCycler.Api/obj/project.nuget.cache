@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WNd+VACeBMtjcBudwzpDHErEj2Zd5x/Ew1j7unxAtu+8lMSknBvTKC+ECWnLPkq6vOrV5e99j4iRcx8WMNHj7A==",
+  "dgSpecHash": "EY4yygHN5zGhgDN96IyfmixgbTv7eX6wniMCHU5pVEWrzIMoM8BaX66EqBF4IS4m2eQPZ9My4gtYDOhVtRM/Hg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Api\\RentMyCycler.Api.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Angel Rosales\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
     "C:\\Users\\Angel Rosales\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\Angel Rosales\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
+    "C:\\Users\\Angel Rosales\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Angel Rosales\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\Angel Rosales\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Angel Rosales\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
