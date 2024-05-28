@@ -4,13 +4,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using RentMyCycler.Api.DTO;
 using RentMyCycler.Core.http;
 using RentMyCycler.Website.Services.Interfaces;
-namespace RentMyCycler.Website.Pages.UserProfile;
 
-public class UserProfile : PageModel
+namespace RentMyCycler.Website.Pages.UsersManagement;
+
+public class Edit : PageModel
 {
-    
     [BindProperty] public UserDto UserDto { get; set; }
-    [BindProperty] public string Label { get; set; }
     [NotMapped]
     public string BirthdateFormatted => UserDto.Birthdate.ToString("yyyy-MM-dd");
 
@@ -20,7 +19,7 @@ public class UserProfile : PageModel
     private readonly IUserService _service;
     private readonly IBikeCategoryService _bikeService;
 
-    public UserProfile(IUserService service, IBikeCategoryService bikeCategory)
+    public Edit(IUserService service, IBikeCategoryService bikeCategory)
     {
         BikeCategories = new List<BikeCategoryDto>();
         _service = service;
@@ -40,10 +39,6 @@ public class UserProfile : PageModel
             //Obtener informacion del servicio API
             var response = await _service.GetById(id.Value);
             UserDto = response.Data;
-            
-            var responseUser = await _service.LoginAsync(UserDto.Email, UserDto.Password);
-            var Id = responseUser.Data.id;
-            TempData["id"] = Id;
         }
 
         if (UserDto == null)
@@ -66,17 +61,15 @@ public class UserProfile : PageModel
         string cyclingPreferences = Request.Form["CyclingPreferences"];
         UserDto.Cycling_preferences = cyclingPreferences;
         response = await _service.UpdateAsync(UserDto);
-        
-        Label = "Your Profile has been updated Succes!";
+
         Errors = response.Errors;
 
         if (Errors.Count > 0)
         {
             return Page();
         }
-        
-        var responseBikeCategory = await _bikeService.GetAllAsync();
-        BikeCategories = responseBikeCategory.Data;
-        return Page();
+
+        UserDto = response.Data;
+        return RedirectToPage("/UsersManagement/UsersManagement");
     }
 }

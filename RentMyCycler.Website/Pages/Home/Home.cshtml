@@ -23,7 +23,7 @@
 </head>
 <header>
     <div class="navbar">
-         <div class="myProfile"><a href="/UserProfile/UserProfile">My Profile</a></div>
+            <div class="myProfile"><a  asp-page="/UserProfile/UserProfile" asp-route-id="@Model.id">My Profile</a></div>
     </div>
    
 </header>
@@ -103,39 +103,22 @@
     <section class="bikes">
         <h2>Bikes</h2>
         <div class="card-container-bike">
-            <a href="#">
-                <div class="card-bike">
-                    <div class="card-image-bike">
-                        <img src="https://cdn-icons-png.flaticon.com/512/6381/6381416.png" alt="Bicycle Image">
+            @foreach (var bike in @Model.Bikes)
+            {
+                <a asp-page="/CatalogBikes/NewReservation" asp-route-id="@bike.id">
+                    <div class="card-bike">
+                        <div class="card-image-bike">
+                            <img src="@bike.Image" alt="Bicycle Image">
+                        </div>
+                        <div class="card-content-bike">
+                            <p>@bike.Description</p>
+                        </div>
                     </div>
-                    <div class="card-content-bike">
-                        <p>Customers can reserve a bicycle at any time of the day or night, regardless of their physical location.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-bike">
-                    <div class="card-image-bike">
-                        <img src="https://i.pinimg.com/originals/52/e2/d7/52e2d779b75c12e8b431651292b57bca.png" alt="Bicycle Image">
-                    </div>
-                    <div class="card-content-bike">
-                        <p>Customers can select the size and style of bicycle that best suits their needs and preferences.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="/dsd">
-                <div class="card-bike">
-                    <div class="card-image-bike">
-                        <img src="~/TiggerButt.png" alt="Bicycle Image">
-                    </div>
-                    <div class="card-content-bike">
-                        <p>By booking online, customers can ensure that the bicycle they want is available at the desired time and place.</p>
-                    </div>
-                </div>
-            </a>
+                </a>
+            }
         </div>
         <br/>
-        <a href="/CatalogBikes/CatalogBikes" class="view-all-link">View All</a>
+        <a asp-page="/CatalogBikes/CatalogBikes" asp-route-id="@Model.id" class="view-all-link">View All</a>
     </section>
 </main>
 </body>

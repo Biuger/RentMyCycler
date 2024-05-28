@@ -1,0 +1,54 @@
+@page "{id:int}"
+@model RentMyCycler.Website.Pages.BikeCategories.Delete
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Deleting Bike Category</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h2>Deleting Bike Category</h2>
+            <form method="post" id="bikeForm">
+                    <input readonly type="hidden" asp-for="BikeCategoryDto.id"/>
+                    <div class="form-group">
+                        <label asp-for="BikeCategoryDto.Bike_type"></label>
+                        <input readonly asp-for="BikeCategoryDto.Bike_type" class="form-control" maxlength="45" required/>
+                        <span class="text-danger" asp-validation-for="BikeCategoryDto.Bike_type"></span>
+                    </div>
+                                        
+                    <div class="form-group">
+                        <label asp-for="BikeCategoryDto.Description_Bike"></label>
+                        <input readonly asp-for="BikeCategoryDto.Description_Bike" class="form-control" maxlength="45" required/>
+                        <span class="text-danger" asp-validation-for="BikeCategoryDto.Description_Bike"></span>
+                    </div>
+                @if (Model.Errors.Count > 0)
+                {
+                    <div class="aler alert-danger" role="alert">
+                        <ul>
+                            @foreach (var error in Model.Errors)
+                            {
+                                <li>This bike already exist</li>
+                            }
+                        </ul>
+                    </div>
+                }
+                <br/>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary mr-3" id="saveButton"> Delete</button>
+                        <a class="btn btn-secondary" asp-page="/BikesManagement/BikesManagement">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+</body>
+</html>

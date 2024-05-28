@@ -1,12 +1,12 @@
 @page
-@model RentMyCycler.Website.Pages.UsersManagement.UsersManagement
+@model RentMyCycler.Website.Pages.BikeCategories.BikeCategories
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User List</title>
+    <title>List of Bike Categories</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/BikesManagementCss.css" />
     <style>
@@ -17,9 +17,6 @@
             background-color: #f0f0f0;
             padding: 10px;
             margin-bottom: 10px;
-        }
-        .user-image {
-            margin-right: 15px;
         }
         .user-image img {
             width: 50px;
@@ -37,12 +34,8 @@
             border: none;
             background: none;
         }
-        .a-button {
+        .a-button{
             color: black;
-        }
-        .disabled {
-            pointer-events: none;
-            opacity: 0.5;
         }
     </style>
 </head>
@@ -50,32 +43,31 @@
 <header>
     <div class="navbar">
         <div class="myProfile">
-            <a asp-page="/AdminMenu/AdminMenu">Go back</a>
+            <a asp-page="/BikeCategories/Edit" asp-route-id="0">Add Bike category</a>
+            |
+            <a asp-page="/BikesManagement/BikesManagement">Go back</a>
         </div>
     </div>
+   
 </header>
 <div class="container mt-5">
-    <h1>User List</h1>
+    <h1>List of Bike Categories</h1>
     <div>
-        @foreach (var user in Model.Users)
+        @foreach (var bikeCategory in Model.bikeCategories)
         {
             <div class="user-card">
-                <div class="user-image">
-                    <img src="@user.Image" alt="@user.Username"/>
-                </div>
                 <div class="user-info">
-                    <p><strong>E-mail:</strong> @user.Email</p>
-                    <p><strong>Address:</strong> @user.Adress</p>
-                    <p><strong>Admin:</strong> @user.Admin</p>
+                    <p><strong>Category:</strong> @bikeCategory.Bike_type</p>
+                    <p><strong>Description:</strong> @bikeCategory.Description_Bike</p>
                 </div>
                 <div class="user-actions">
-                    <a class="a-button @(user.Admin ? "disabled" : "")" asp-page="/UsersManagement/Edit" asp-route-id="@user.id">
+                    <a class="a-button" asp-page="/BikeCategories/Edit" asp-route-id="@bikeCategory.id" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                             <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
                         </svg>
                     </a>
-                    <a class="a-button @(user.Admin ? "disabled" : "")" asp-page="/UsersManagement/Delete" asp-route-id="@user.id">
+                    <a class="a-button" asp-page="/BikeCategories/Delete" asp-route-id="@bikeCategory.id">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                             <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>

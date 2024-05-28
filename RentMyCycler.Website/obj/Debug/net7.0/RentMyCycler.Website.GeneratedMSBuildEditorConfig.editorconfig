@@ -20,8 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEFkbWluTWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/BikeCategories/BikeCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmlrZUNhdGVnb3JpZXNcQmlrZUNhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/BikeCategories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmlrZUNhdGVnb3JpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/BikeCategories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmlrZUNhdGVnb3JpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/BikesManagement/BikesManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmlrZXNNYW5hZ2VtZW50XEJpa2VzTWFuYWdlbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/BikesManagement/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmlrZXNNYW5hZ2VtZW50XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/BikesManagement/Edit.cshtml]
@@ -30,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/CatalogBikes/CatalogBikes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ0Jpa2VzXENhdGFsb2dCaWtlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/CatalogBikes/NewReservation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ0Jpa2VzXE5ld1Jlc2VydmF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/Error.cshtml]
@@ -54,6 +74,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/UserProfile/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclByb2ZpbGVcVXNlclByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/UsersManagement/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNNYW5hZ2VtZW50XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/UsersManagement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNNYW5hZ2VtZW50XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Angel Rosales/Documents/Proyectos web multi plataforma/RentMyCycler/RentMyCycler.Website/Pages/UsersManagement/UsersManagement.cshtml]

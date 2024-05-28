@@ -63,24 +63,24 @@ public class UsersController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPut("{id:int}")]
-    public async Task<ActionResult<Response<UserDto>>> Update(int id, [FromBody] UserDto UserDto)
+    [HttpPut]
+    public async Task<ActionResult<Response<UserDto>>> Update([FromBody] UserDto userDto)
     {
         var response = new Response<UserDto>();
         
-        if (!await _userService.UserExist(UserDto.id))
+        if (!await _userService.UserExist(userDto.id))
         {
             response.Errors.Add("User not Found");
             return NotFound(response);
         }
 
-        if (await _userService.ExistByName(UserDto.Username, UserDto.id))
+        if (await _userService.ExistByName(userDto.Username, userDto.id))
         {
-            response.Errors.Add($"Username {UserDto.Username} already exist");
+            response.Errors.Add($"Username {userDto.Username} already exist");
             return BadRequest(response);
         }
         
-        response.Data = await _userService.UpdateAsync(UserDto);
+        response.Data = await _userService.UpdateAsync(userDto);
         return Ok(response);
     }
 

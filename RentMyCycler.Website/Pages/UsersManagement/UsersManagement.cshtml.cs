@@ -1,18 +1,27 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RentMyCycler.Api.DTO;
 using RentMyCycler.Core.Entities;
+using RentMyCycler.Website.Services.Interfaces;
 
 namespace RentMyCycler.Website.Pages.UsersManagement;
 
 public class UsersManagement : PageModel
 {
-    public List<Users> Users { get; set; }
-    public void OnGet()
+    private readonly IUserService _service;
+    
+    public List<UserDto> Users { get; set; }
+
+    public UsersManagement(IUserService service)
     {
-        Users = new List<Users>
-        {
-            new Users { id = 1, Username = "user1", Email = "user1@example.com" },
-            new Users { id = 2, Username = "user2", Email = "user2@example.com" },
-            new Users { id = 3, Username = "user3", Email = "user3@example.com" }
-        };
+        Users = new List<UserDto>();
+        _service = service;
+    }
+    public  async Task<IActionResult> OnGet()
+    {
+        var response = await _service.GetAllAsync();
+        Users = response.Data;
+        
+        return Page();
     }
 }

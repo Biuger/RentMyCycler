@@ -1,0 +1,78 @@
+@page "{id:int}"
+@model RentMyCycler.Website.Pages.UsersManagement.Delete
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deleting User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h2>Deleting User</h2>
+            <form method="post" id="bikeForm">
+                <input type="hidden" asp-for="UserDto.id"/>
+                <div class="form-group">
+                    <label asp-for="UserDto.Username"></label>
+                    <input readonly asp-for="UserDto.Username" class="form-control" maxlength="45" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Username"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Birthdate"></label>
+                    <input readonly asp-for="UserDto.Birthdate" class="form-control" type="date" value="@Model.BirthdateFormatted" required />
+                    <span class="text-danger" asp-validation-for="UserDto.Birthdate"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Adress"></label>
+                    <input readonly asp-for="UserDto.Adress" class="form-control" maxlength="45" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Adress"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="CyclingPreferences">Cycling preferences:</label>
+                    <select disabled id="CyclingPreferences" name="CyclingPreferences" class="form-control" asp-for="UserDto.Cycling_preferences" required>
+                        <option value="">Select an option</option>
+                        @foreach (var category in Model.BikeCategories)
+                        {
+                            <option value="@category.Bike_type">@category.Bike_type</option>
+                        }
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Image"></label>
+                    <input readonly asp-for="UserDto.Image" class="form-control" maxlength="100" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Image"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Email"></label>
+                    <input readonly asp-for="UserDto.Email" class="form-control" maxlength="45" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Email"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Password"></label>
+                    <input readonly id="Password" asp-for="UserDto.Password" class="form-control" maxlength="45" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Password"></span>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary mr-3" id="saveButton">Delete</button>
+                        <a class="btn btn-secondary" asp-page="/UsersManagement/UsersManagement">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+</body>
+</html>

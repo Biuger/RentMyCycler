@@ -1,0 +1,100 @@
+@page
+@model RentMyCycler.Website.Pages.BikeCategories.Edit
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add / Edit Bike Category</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h2>@Model.Label</h2>
+            <form method="post" id="bikeForm">
+                @if (Model.Label == "New Bike Category")
+                {
+                    <input type="hidden"/>
+                    <div class="form-group">
+                        <label asp-for="BikeCategoryDto.Bike_type"></label>
+                        <input asp-for="BikeCategoryDto.Bike_type" class="form-control" maxlength="45" required/>
+                        <span class="text-danger" asp-validation-for="BikeCategoryDto.Bike_type"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="BikeCategoryDto.Description_Bike"></label>
+                        <input asp-for="BikeCategoryDto.Description_Bike" class="form-control" maxlength="45" required/>
+                        <span class="text-danger" asp-validation-for="BikeCategoryDto.Description_Bike"></span>
+                    </div>
+                }
+                else
+                {
+                    <input type="hidden" asp-for="BikeCategoryDto.id"/>
+                    <div class="form-group">
+                        <label asp-for="BikeCategoryDto.Bike_type"></label>
+                        <input asp-for="BikeCategoryDto.Bike_type" class="form-control" maxlength="45" required/>
+                        <span class="text-danger" asp-validation-for="BikeCategoryDto.Bike_type"></span>
+                    </div>
+                                        
+                    <div class="form-group">
+                        <label asp-for="BikeCategoryDto.Description_Bike"></label>
+                        <input asp-for="BikeCategoryDto.Description_Bike" class="form-control" maxlength="45" required/>
+                        <span class="text-danger" asp-validation-for="BikeCategoryDto.Description_Bike"></span>
+                    </div>
+                }
+               
+                @if (Model.Errors.Count > 0)
+                {
+                    <div class="aler alert-danger" role="alert">
+                        <ul>
+                            @foreach (var error in Model.Errors)
+                            {
+                                <li>This bike category already exist</li>
+                            }
+                        </ul>
+                    </div>
+                }
+                <br/>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary mr-3" id="saveButton" disabled>Save</button>
+                        <a class="btn btn-secondary" asp-page="/BikeCategories/BikeCategories">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-md-1"></div>
+    </div>
+</div>
+<script>
+    // Función para verificar si todos los campos obligatorios están completos
+    function validateForm() {
+        var isValid = true;
+        var inputs = document.querySelectorAll('input[required], select[required]');
+        inputs.forEach(function(input) {
+            if (!input.value.trim()) {
+                isValid = false;
+            }
+        });
+        return isValid;
+    }
+
+    // Función para habilitar o deshabilitar el botón "Save" según la validación del formulario
+    function toggleSaveButton() {
+        var saveButton = document.getElementById('saveButton');
+        saveButton.disabled = !validateForm();
+    }
+
+    // Agrega eventos de cambio a los campos del formulario para verificar cuando se completan
+    var formInputs = document.querySelectorAll('input[required], select[required]');
+    formInputs.forEach(function(input) {
+        input.addEventListener('change', toggleSaveButton);
+    });
+</script>
+</body>
+</html>

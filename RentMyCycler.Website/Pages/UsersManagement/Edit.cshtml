@@ -1,0 +1,138 @@
+@page "{id:int}"
+@model RentMyCycler.Website.Pages.UsersManagement.Edit
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h2>Editing User</h2>
+            <form method="post" id="bikeForm">
+                <input type="hidden" asp-for="UserDto.id"/>
+                <div class="form-group">
+                    <label asp-for="UserDto.Username"></label>
+                    <input asp-for="UserDto.Username" class="form-control" maxlength="45" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Username"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Birthdate"></label>
+                    <input asp-for="UserDto.Birthdate" class="form-control" type="date" value="@Model.BirthdateFormatted" required />
+                    <span class="text-danger" asp-validation-for="UserDto.Birthdate"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Adress"></label>
+                    <input asp-for="UserDto.Adress" class="form-control" maxlength="45" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Adress"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="CyclingPreferences">Cycling preferences:</label>
+                    <select id="CyclingPreferences" name="CyclingPreferences" class="form-control" asp-for="UserDto.Cycling_preferences" required>
+                        <option value="">Select an option</option>
+                        @foreach (var category in Model.BikeCategories)
+                        {
+                            <option value="@category.Bike_type">@category.Bike_type</option>
+                        }
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Image"></label>
+                    <input asp-for="UserDto.Image" class="form-control" maxlength="100" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Image"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Email"></label>
+                    <input asp-for="UserDto.Email" class="form-control" maxlength="45" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Email"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="UserDto.Password"></label>
+                    <input id="Password" asp-for="UserDto.Password" class="form-control" maxlength="45" required/>
+                    <span class="text-danger" asp-validation-for="UserDto.Password"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ConfirmPassword">Confirm Password:</label>
+                    <input id="ConfirmPassword" class="form-control" maxlength="45" required/>
+                    <span asp-validation-for="UserDto.Password" type="password" class="text-danger"></span>
+                </div>
+                
+                @if (Model.Errors.Count > 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        <ul>
+                            @foreach (var error in Model.Errors)
+                            {
+                                <li>@error</li>
+                            }
+                        </ul>
+                    </div>
+                }
+                <br/>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary mr-3" id="saveButton" disabled>Save</button>
+                        <a class="btn btn-secondary" asp-page="/UsersManagement/UsersManagement">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const password = document.getElementById('Password');
+        const confirmPassword = document.getElementById('ConfirmPassword');
+        const saveButton = document.getElementById('saveButton');
+
+        // Función para verificar si todos los campos obligatorios están completos
+        function validateForm() {
+            var isValid = true;
+            var inputs = document.querySelectorAll('input[required], select[required]');
+            inputs.forEach(function(input) {
+                if (!input.value.trim()) {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+
+        // Función para validar si las contraseñas coinciden
+        function validatePasswords() {
+            return password.value === confirmPassword.value && password.value !== '';
+        }
+
+        // Función para habilitar o deshabilitar el botón "Save" según la validación del formulario
+        function toggleSaveButton() {
+            saveButton.disabled = !(validateForm() && validatePasswords());
+        }
+
+        // Agrega eventos de cambio a los campos del formulario para verificar cuando se completan
+        var formInputs = document.querySelectorAll('input[required], select[required]');
+        formInputs.forEach(function(input) {
+            input.addEventListener('change', toggleSaveButton);
+        });
+
+        // Agrega eventos de entrada a los campos de contraseña para validar contraseñas
+        password.addEventListener('input', toggleSaveButton);
+        confirmPassword.addEventListener('input', toggleSaveButton);
+
+        // Validar formulario al cargar la página
+        toggleSaveButton();
+    });
+</script>
+</body>
+</html>

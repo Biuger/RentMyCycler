@@ -37,6 +37,8 @@ public class IndexModel : PageModel
                     }
                     else
                     {
+                        var id = response.Data.id;
+                        TempData["id"] = id;
                         return RedirectToPage("/Home/Home"); 
                     }
                 }
