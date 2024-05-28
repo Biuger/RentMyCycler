@@ -4,6 +4,7 @@ namespace RentMyCycler.Api.DTO;
 
 public class UserDto: DtoBase
 {
+    public int id { get; set; }
     public string Username { get; set; }
     public DateOnly Birthdate { get; set; }
     public string Adress { get; set; }

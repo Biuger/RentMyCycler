@@ -25,4 +25,5 @@ public interface IUserService
     
     // Método para autenticar usuarios
     Task<UserDto> LoginAsync(string email, string password);
+    Task<bool> ExistByName(string name, int id = 0);
 }

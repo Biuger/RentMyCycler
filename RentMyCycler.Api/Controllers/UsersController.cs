@@ -33,10 +33,16 @@ public class UsersController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<Users>>> Post([FromBody] UserDto UserDto)
     {
-        var response = new Response<UserDto>
+        var response = new Response<UserDto>();
+
+        if (await _userService.ExistByName(UserDto.Username))
         {
-            Data = await _userService.SaveAsync(UserDto)
-        };
+            response.Errors.Add($"Product Category name {UserDto.Username} already exist");
+            return BadRequest(response);
+        }
+
+        response.Data = await _userService.SaveAsync(UserDto);
+        
         return Created($"/api/[controller]/{UserDto.id}", response);
     }
 
@@ -61,13 +67,19 @@ public class UsersController : ControllerBase
     public async Task<ActionResult<Response<UserDto>>> Update(int id, [FromBody] UserDto UserDto)
     {
         var response = new Response<UserDto>();
-        if (!await _userService.UserExist(id))
+        
+        if (!await _userService.UserExist(UserDto.id))
         {
-            response.Errors.Add("User not found");
+            response.Errors.Add("User not Found");
             return NotFound(response);
         }
 
-        UserDto.id = id; // Actualizamos el ID con el valor recibido en la ruta
+        if (await _userService.ExistByName(UserDto.Username, UserDto.id))
+        {
+            response.Errors.Add($"Username {UserDto.Username} already exist");
+            return BadRequest(response);
+        }
+        
         response.Data = await _userService.UpdateAsync(UserDto);
         return Ok(response);
     }

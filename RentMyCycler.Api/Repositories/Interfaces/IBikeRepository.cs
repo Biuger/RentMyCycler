@@ -18,4 +18,5 @@ public interface IBikeRepository
     
     //Método para obtener una bicicleta por id
     Task<Bikes> GetByIdAsync(int id);
+    Task<Bikes> GetByName(string name, int id = 0);
 }

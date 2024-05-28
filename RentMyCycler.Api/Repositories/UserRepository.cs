@@ -64,4 +64,12 @@ public class UserRepository : IUserRepository
     {
         return await GetByEmailAsync(email, password);
     }
+    
+    public async Task<Users> GetByName(string name, int id = 0)
+    {
+        string sq = $"SELECT * FROM Users WHERE Username = '{name}' AND id <> {id}";
+        var categories = await _dbContext.Connection.QueryAsync<Users>(sq);
+
+        return categories.ToList().FirstOrDefault();
+    }
 }

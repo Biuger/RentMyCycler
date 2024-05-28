@@ -20,4 +20,6 @@ public interface IUserRepository
     Task<Users> GetByIdAsync(int id);
     
     Task<Users> GetLogin(string email, string password);
+    Task<Users> GetByName(string name, int id = 0);
+    
 }

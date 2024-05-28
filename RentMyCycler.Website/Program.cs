@@ -1,3 +1,6 @@
+using RentMyCycler.Website.Services;
+using RentMyCycler.Website.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.ConfigureKestrel(options =>
@@ -11,6 +14,9 @@ builder.WebHost.ConfigureKestrel(options =>
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IBikeCategoryService, BikeCategoryService>();
+builder.Services.AddScoped<IBikeService, BikeService>();
 
 var app = builder.Build();
 

@@ -11,6 +11,7 @@ namespace RentMyCycler.Api.DTO
 
         [StringLength(100, ErrorMessage = "La descripción debe tener como máximo 100 caracteres")]
         public string Description_Bike { get; set; }
+        public int id { get; set; }
 
         public BikeCategoryDto()
         {

@@ -1,60 +1,59 @@
-using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RentMyCycler.Api.DTO;
+using RentMyCycler.Core.http;
+using RentMyCycler.Website.Services.Interfaces;
 
 namespace RentMyCycler.Website.Pages.SignUp
 {
     public class SignUp : PageModel
     {
-        [BindProperty]
-        public InputModel Input { get; set; }
+        private readonly IUserService _service;
+        private readonly IBikeCategoryService _bikeService;
         
-        public class InputModel
+        public List<BikeCategoryDto> BikeCategories { get; set; }
+        public List<string> Errors { get; set; } = new List<string>();
+        
+        [BindProperty]
+        public UserDto UserDto { get; set; }
+        
+        public SignUp(IUserService service, IBikeCategoryService bikeCategory)
         {
-            [Required]
-            [EmailAddress]
-            public string Email { get; set; }
-
-            [Required]
-            [DataType(DataType.Password)]
-            public string Password { get; set; }
-           
-            [Required]
-            [DataType(DataType.Password)]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-            public string ConfirmPassword { get; set; }
-
-            [Required]
-            public string Username { get; set; }
-
-            [Required]
-            [DataType(DataType.Date)]
-            public DateTime Birthdate { get; set; }
-
-            [Required]
-            public string Address { get; set; }
-
-            [Required]
-            public string CyclingPreferences { get; set; }
+            BikeCategories = new List<BikeCategoryDto>();
+            _service = service;
+            _bikeService = bikeCategory;
+        }
+        
+        
+        public async Task<IActionResult> OnGet()
+        {
+            var response = await _bikeService.GetAllAsync();
+            BikeCategories = response.Data;
+            return Page();
         }
         
         public async Task<IActionResult> OnPostAsync()
         {
-            int test = 1;
-        
-            if (test == 1)
-            {
-                return RedirectToPage("/Home/Home");
-            }
-            else
+            
+
+            Response<UserDto> response;
+            
+            //Insercción
+            UserDto.Image = "https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png";
+            string cyclingPreferences = Request.Form["CyclingPreferences"];
+            UserDto.Cycling_preferences = cyclingPreferences;
+            response = await _service.SaveAsync(UserDto);
+
+            Errors = response.Errors;
+
+            if (Errors.Count > 0)
             {
                 return Page();
             }
+
+            UserDto = response.Data;
+            return RedirectToPage("/Home/Home");
         }
-        
-        public void OnGet()
-        {
-            
-        }
+
     }
 }

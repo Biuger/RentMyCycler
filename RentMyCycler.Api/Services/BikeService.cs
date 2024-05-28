@@ -88,4 +88,11 @@ public class BikeService: IBikeService
         var bikeDto = new BikeDto(bike);
         return bikeDto;
     }
+    
+    public async Task<bool> ExistByName(string name, int id = 0)
+    {
+        var category = await _bikeRepository.GetByName(name, id);
+
+        return category != null;
+    }
 }

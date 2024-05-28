@@ -74,4 +74,11 @@ public class BikeCategoryService: IBikeCategoryService
         var bikeCategoryDto = new BikeCategoryDto(bikeCategory);
         return bikeCategoryDto;
     }
+    
+    public async Task<bool> ExistByName(string name, int id = 0)
+    {
+        var category = await _bikeCategoryRepository.GetByName(name, id);
+
+        return category != null;
+    }
 }

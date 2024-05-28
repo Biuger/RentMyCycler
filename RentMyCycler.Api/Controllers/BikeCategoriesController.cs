@@ -33,13 +33,16 @@ public class BikeCategoriesController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<BikeCategories>>> Post([FromBody] BikeCategoryDto bikeCategoryDto)
     {
-        var response = new Response<BikeCategoryDto>
-        {
-            Data = await _bikeCategoryService.SaveAsync(bikeCategoryDto)
-        };
+        var response = new Response<BikeCategoryDto>();
 
+        if (await _bikeCategoryService.ExistByName(bikeCategoryDto.Bike_type))
+        {
+            response.Errors.Add($"Product Category name {bikeCategoryDto.Bike_type} already exist");
+            return BadRequest(response);
+        }
+
+        response.Data = await _bikeCategoryService.SaveAsync(bikeCategoryDto);
         
-       
         return Created($"/api/[controller]/{bikeCategoryDto.id}", response);
     }
 
@@ -60,17 +63,23 @@ public class BikeCategoriesController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPut("{id:int}")]
+    [HttpPut()]
     public async Task<ActionResult<Response<BikeCategoryDto>>> Update(int id, [FromBody] BikeCategoryDto bikeCategoryDto)
     {
         var response = new Response<BikeCategoryDto>();
-        if (!await _bikeCategoryService.BikeCategoryExist(id))
+        
+        if (!await _bikeCategoryService.BikeCategoryExist(bikeCategoryDto.id))
         {
-            response.Errors.Add("Bike category not found");
+            response.Errors.Add("Bike Category not Found");
             return NotFound(response);
         }
 
-        bikeCategoryDto.id = id; // Actualizamos el ID con el valor recibido en la ruta
+        if (await _bikeCategoryService.ExistByName(bikeCategoryDto.Bike_type, bikeCategoryDto.id))
+        {
+            response.Errors.Add($"Bike Category name {bikeCategoryDto.Bike_type} already exist");
+            return BadRequest(response);
+        }
+        
         response.Data = await _bikeCategoryService.UpdateAsync(bikeCategoryDto);
         return Ok(response);
     }

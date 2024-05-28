@@ -33,13 +33,16 @@ public class BikesController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<Bikes>>> Post([FromBody] BikeDto bikeDto)
     {
-        var response = new Response<BikeDto>
-        {
-            Data = await _bikeService.SaveAsync(bikeDto)
-        };
+        var response = new Response<BikeDto>();
 
+        if (await _bikeService.ExistByName(bikeDto.Model))
+        {
+            response.Errors.Add($"Bike model {bikeDto.Model} already exist");
+            return BadRequest(response);
+        }
+
+        response.Data = await _bikeService.SaveAsync(bikeDto);
         
-       
         return Created($"/api/[controller]/{bikeDto.id}", response);
     }
 
@@ -60,17 +63,23 @@ public class BikesController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPut("{id:int}")]
-    public async Task<ActionResult<Response<BikeDto>>> Update(int id, [FromBody] BikeDto bikeDto)
+    [HttpPut]
+    public async Task<ActionResult<Response<BikeDto>>> Update([FromBody] BikeDto bikeDto)
     {
         var response = new Response<BikeDto>();
-        if (!await _bikeService.BikeExist(id))
+        
+        if (!await _bikeService.BikeExist(bikeDto.id))
         {
-            response.Errors.Add("Bike not found");
+            response.Errors.Add("Bike not Found");
             return NotFound(response);
         }
 
-        bikeDto.id = id; // Actualizamos el ID con el valor recibido en la ruta
+        if (await _bikeService.ExistByName(bikeDto.Model, bikeDto.id))
+        {
+            response.Errors.Add($"Bike model {bikeDto.Model} already exist");
+            return BadRequest(response);
+        }
+        
         response.Data = await _bikeService.UpdateAsync(bikeDto);
         return Ok(response);
     }

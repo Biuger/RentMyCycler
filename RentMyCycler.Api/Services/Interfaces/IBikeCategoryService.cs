@@ -22,4 +22,5 @@ public interface IBikeCategoryService
     
     //Método para obtener una categoría de bicicleta por id
     Task<BikeCategoryDto> GetByIdAsync(int id);
+    Task<bool> ExistByName(string name, int id = 0);
 }

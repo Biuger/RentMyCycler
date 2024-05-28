@@ -53,4 +53,12 @@ public class BikeCategoryRepository : IBikeCategoryRepository
         return bikeCategory.isDeleted == true ? null : bikeCategory;
        
     }
+    
+    public async Task<BikeCategories> GetByName(string name, int id = 0)
+    {
+        string sq = $"SELECT * FROM BikeCategories WHERE Bike_Type = '{name}' AND id <> {id}";
+        var categories = await _dbContext.Connection.QueryAsync<BikeCategories>(sq);
+
+        return categories.ToList().FirstOrDefault();
+    }
 }

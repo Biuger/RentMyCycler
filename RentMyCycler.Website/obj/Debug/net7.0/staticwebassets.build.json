@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HRU2fcCOfKwiTuvQUM13ZU8WpEOXL99Dp80u5x6FtUw=",
+  "Hash": "CQ2EYJpyPDL1Pug6+So2kwWelF6k+I6vJ4q9aJLcBvk=",
   "Source": "RentMyCycler.Website",
   "BasePath": "_content/RentMyCycler.Website",
   "Mode": "Default",
@@ -826,6 +826,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\AdminMenuCss.css"
+    },
+    {
+      "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\BikesManagementCss.css",
+      "SourceId": "RentMyCycler.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\",
+      "BasePath": "_content/RentMyCycler.Website",
+      "RelativePath": "css/BikesManagementCss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\BikesManagementCss.css"
     },
     {
       "Identity": "C:\\Users\\Angel Rosales\\Documents\\Proyectos web multi plataforma\\RentMyCycler\\RentMyCycler.Website\\wwwroot\\css\\CatalogBikesCss.css",

@@ -18,4 +18,5 @@ public interface IBikeCategoryRepository
     
     //Método para obtener una categoría de bicicleta por id
     Task<BikeCategories> GetByIdAsync(int id);
+    Task<BikeCategories> GetByName(string name, int id = 0);
 }

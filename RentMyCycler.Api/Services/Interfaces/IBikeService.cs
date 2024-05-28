@@ -22,4 +22,5 @@ public interface IBikeService
     
     //Método para obtener una bicicleta por id
     Task<BikeDto> GetByIdAsync(int id);
+    Task<bool> ExistByName(string name, int id = 0);
 }

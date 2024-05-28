@@ -1,21 +1,29 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RentMyCycler.Api.DTO;
+
 using RentMyCycler.Core.Entities;
+using RentMyCycler.Website.Services.Interfaces;
 
 namespace RentMyCycler.Website.Pages.BikesManagement;
 
 public class BikesManagement : PageModel
 {
-    public List<Bikes> Bikes { get; set; }
-    public string Model { get; set; }
-    public bool Availability { get; set; }
-    public string ImageUrl { get; set; }
-    public void OnGet()
+    private readonly IBikeService _service;
+    
+    public List<BikeDto> Bikes { get; set; }
+
+    public BikesManagement(IBikeService service)
     {
-        Bikes = new List<Bikes>
-        {
-            new Bikes { id = 1, Model = "user1", Availability = true},
-            new Bikes { id = 2, Model = "user2", Availability =true },
-            new Bikes { id = 3, Model = "user3", Availability = true }
-        };
+        Bikes = new List<BikeDto>();
+        _service = service;
+    }
+    
+    public async Task<IActionResult> OnGet()
+    {
+        var response = await _service.GetAllAsync();
+        Bikes = response.Data;
+        
+        return Page();
     }
 }

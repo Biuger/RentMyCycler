@@ -31,3 +31,27 @@
     font-size: 18px;
     font-weight: bold;
 }
+.navbar{
+    background-color: #ff6600;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-content: center;
+    font-weight: bold !important;
+}
+
+.navbar, a{
+    align-content: center;
+    color: white;
+
+}
+a {
+    text-decoration: none;
+}
+.myProfile{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+}

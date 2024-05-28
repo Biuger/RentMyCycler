@@ -5,18 +5,14 @@ namespace RentMyCycler.Website.Services.Interfaces;
 
 public interface IUserService
 {
-    public interface IProductCategoryService
-    {
-        Task<Response<List<UserDto>>> GetAllAsync();
+    Task<Response<List<UserDto>>> GetAllAsync();
 
-        Task<Response<UserDto>> GetById(int id);
+    Task<Response<UserDto>> GetById(int id);
 
-        Task<Response<UserDto>> SaveAsync(UserDto userDto);
+    Task<Response<UserDto>> SaveAsync(UserDto userDto);
 
-        Task<Response<UserDto>> UpdateAsync(UserDto userDto);
+    Task<Response<UserDto>> UpdateAsync(UserDto userDto);
 
-        Task<Response<bool>> DeleteAsync(int id);
-        Task<Response<UserDto>> RegisterAsync(UserDto userDto);
-        Task<Response<UserDto>> LoginAsync(UserDto userDto);
-    }
+    Task<Response<bool>> DeleteAsync(int id);
+    Task<Response<UserDto>> LoginAsync(string email, string password);
 }

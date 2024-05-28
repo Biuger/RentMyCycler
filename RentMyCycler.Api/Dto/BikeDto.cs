@@ -5,6 +5,7 @@ namespace RentMyCycler.Api.DTO
 {
     public class BikeDto : DtoBase
     {
+        public int id { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         [StringLength(50, ErrorMessage = "Ingrese un valor máximo de 50 caracteres")]
         public string Brand { get; set; }
@@ -25,10 +26,11 @@ namespace RentMyCycler.Api.DTO
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public bool Availability { get; set; }
 
-        [RegularExpression("^(New|Used|Reconditioned)$", ErrorMessage = "La condición de la bicicleta debe ser Nuevo, Usado o Reacondicionado")]
+        [RegularExpression("^(New|Used|Bad conditions)$", ErrorMessage = "Only New, Used or Bad conditions")]
         public string Condition_bike { get; set; }
 
-        [Range(0, double.MaxValue, ErrorMessage = "El costo de alquiler debe ser mayor o igual a cero")]
+        [Required(ErrorMessage = "El costo de alquiler es obligatorio.")]
+       
         public decimal Rental_cost { get; set; }
 
         public string Image{ get; set; }
